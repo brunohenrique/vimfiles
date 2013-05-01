@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 
 "langs
 Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
 
 "tools
 Bundle 'mattn/webapi-vim'
