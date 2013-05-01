@@ -17,7 +17,8 @@ Bundle 'mmalecki/vim-node.js'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
-Blunde 'puppetlabs/puppet-syntax-vim'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'tpope/vim-git'
 
 "tools
 Bundle 'mattn/webapi-vim'
