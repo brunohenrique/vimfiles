@@ -8,6 +8,10 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+"langs
+Bundle 'tpope/vim-rails'
+
+"tools
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/vim-powerline'
@@ -18,4 +22,3 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-rails'
