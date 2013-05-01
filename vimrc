@@ -19,6 +19,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-markdown'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'tpope/vim-git'
+Bundle 'othree/html5.vim'
 
 "tools
 Bundle 'editorconfig/editorconfig-vim'
