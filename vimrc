@@ -21,6 +21,7 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'tpope/vim-git'
 
 "tools
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/vim-powerline'
