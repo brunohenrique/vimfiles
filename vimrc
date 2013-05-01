@@ -13,6 +13,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'jimenezrick/vimerl'
+Bundle 'mmalecki/vim-node.js'
 
 "tools
 Bundle 'mattn/webapi-vim'
