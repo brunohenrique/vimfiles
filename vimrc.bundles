@@ -35,3 +35,5 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'skwp/vim-rspec'
 Bundle 'tpope/vim-endwise'
+
+filetype on
