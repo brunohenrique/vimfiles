@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'jimenezrick/vimerl'
 
 "tools
 Bundle 'mattn/webapi-vim'
