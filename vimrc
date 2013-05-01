@@ -16,6 +16,7 @@ Bundle 'jimenezrick/vimerl'
 Bundle 'mmalecki/vim-node.js'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-markdown'
 
 "tools
 Bundle 'mattn/webapi-vim'
