@@ -1,3 +1,6 @@
+" Leader
+"let mapleader="\"
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -9,18 +12,11 @@ set encoding=utf-8 nobomb
 
 " Colour scheme
 syntax enable
-colorscheme Tomorrow-Night
-set lines=33 columns=90
-set guioptions-=T
-set guioptions-=m
-set guioptions+=LlRrb
-set guioptions-=LlRrb
-
 
 "define font"
 "set guifont=Ubuntu\ Mono:h18
-"set guifont=Ubuntu\ Mono\ Bold\ 12
-set guifont=Monaco\ Bold\ 9.5
+set guifont=Ubuntu\ Mono\ Bold\ 12
+"set guifont=Monaco\ Bold\ 9.5
 "set guifont=Monaco\ 9.5
 "set guifont=Monospace\ Bold\ 10
 "set guifont=Monospace\ 10
@@ -29,7 +25,7 @@ set guifont=Monaco\ Bold\ 9.5
 set cursorline
 
 "number lines"
-:set number
+set number
 
 "define the space between lines"
 set linespace=0
@@ -61,9 +57,9 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 if exists("&relativenumber")
-" Use relative line numbers
-set relativenumber
-au BufReadPost * set relativenumber
+  " Use relative line numbers
+  set relativenumber
+  au BufReadPost * set relativenumber
 endif
 
 " Strip trailing whitespace
