@@ -12,6 +12,13 @@ set encoding=utf-8 nobomb
 
 " Colour scheme
 syntax enable
+colorscheme Tomorrow-Night
+set lines=33 columns=90
+set guioptions-=T
+set guioptions-=m
+set guioptions+=LlRrb
+set guioptions-=LlRrb
+
 
 "define font"
 "set guifont=Ubuntu\ Mono:h18
@@ -43,12 +50,18 @@ set softtabstop=2
 set shiftwidth=2
 set shiftround
 
+" Powerline options
+"let g:Powerline_symbols = 'fancy'
+let g:Powerline_cache_enabled = 1
+set laststatus=2
 
-" Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set expandtab
+" NERDTree mappings
+nnoremap <Leader>p :NERDTreeToggle<CR>
 
+" vim-rspec mappings
+nnoremap <Leader>t :RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :RunNearestSpec()<CR>
+nnoremap <Leader>l :RunLastSpec()<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
