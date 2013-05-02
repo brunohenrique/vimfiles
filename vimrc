@@ -59,6 +59,9 @@ nnoremap <Leader>t :RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :RunNearestSpec()<CR>
 nnoremap <Leader>l :RunLastSpec()<CR>
 
+" Ctrl+R reloads the ~/.vimrc file
+nnoremap <F12> :source ~/.vimrc
+
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
