@@ -25,24 +25,23 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 
 "tools
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'Townk/vim-autoclose'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'henrik/vim-ruby-runner'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'skwp/vim-rspec'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-endwise'
-Bundle 'vim-scripts/ctags.vim'
+Bundle 'Lokaltog/vim-powerline'         " Powerline is a utility plugin which allows you to create better-looking, more functional vim statuslines.
+Bundle 'Townk/vim-autoclose'            " For instance if you type an '(', ``autoclose`` will automatically insert a ')' and put the cursor between than.
+Bundle 'airblade/vim-gitgutter'         " A Vim plugin which shows a git diff in the 'gutter' (sign column).
+Bundle 'editorconfig/editorconfig-vim'  " EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs.
+Bundle 'henrik/vim-ruby-runner'         " Vim plugin to execute Ruby code from the current buffer into an output buffer, similar to ⌘R in TextMate.
+Bundle 'jeetsukumaran/vim-buffergator'  " Vim plugin to list, select and switch between buffers.
+Bundle 'kien/ctrlp.vim'                 " replaces CommandT as a better fuzzy finder
+Bundle 'mattn/gist-vim'                 " vimscript for gist
+Bundle 'mattn/webapi-vim'               " vim interface to Web API
+Bundle 'mileszs/ack.vim'                " type :Ack [search pattern] to search your entire project
+Bundle 'msanders/snipmate.vim'          " support for textmate-like snippets for several languages
+Bundle 'scrooloose/nerdcommenter'       " support to comment lines of code
+Bundle 'scrooloose/nerdtree'            " project pane that you can open with [leader] p
+Bundle 'scrooloose/syntastic'           " checks for syntax errors in many languages
+Bundle 'skwp/vim-rspec'                 " Beautiful, colorized RSpec tests in Vim with direct access to the line where the error occurred.
+Bundle 'terryma/vim-multiple-cursors'   " True Sublime Text style multiple selections for Vim
+Bundle 'tpope/vim-endwise'              " support to close Ruby blocks such as ‘if’, ‘do’ with ‘end’
+Bundle 'vim-scripts/ctags.vim'          " This script uses exuberant ctags to build the list of tags for the current file.
 
 filetype on
