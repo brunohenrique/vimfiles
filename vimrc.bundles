@@ -43,5 +43,6 @@ Bundle 'skwp/vim-rspec'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-scripts/ctags.vim'
+Bundle 'jceb/vim-orgmode'
 
 filetype on
