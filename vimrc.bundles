@@ -49,5 +49,6 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/ctags.vim'
+Bundle 'natw/keyboard_cat.vim'
 
 filetype on
