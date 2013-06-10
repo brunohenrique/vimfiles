@@ -1,6 +1,6 @@
 " Leader
 "let mapleader="\"
-"set t_Co=256
+set t_Co=256
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -14,7 +14,7 @@ set encoding=utf-8 nobomb
 " Colour scheme
 syntax enable
 set background=dark
-colorscheme base16-solarized
+colorscheme base16-ocean
 
 "define font"
 "set guifont=Ubuntu\ Mono:h18
