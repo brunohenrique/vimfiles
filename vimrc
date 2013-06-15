@@ -1,94 +1,105 @@
-" Leader
-"let mapleader="\"
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
 set t_Co=256
 
+" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
+" source ~/.vimrc.before if it exists.
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
+endif
+
+" ================ General Config ====================
+
+set number                      "Line numbers are good
+set backspace=indent,eol,start  "Allow backspace in insert mode
+set history=1000                "Store lots of :cmdline history
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set gcr=a:blinkon0              "Disable cursor blink
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+"turn on syntax highlighting
+syntax on
+
+
+" =============== Vundle Initialization ===============
+" This loads all the plugins specified in ~/.vimrc.bundles
+" Use Vundle plugin to manage all other plugins
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-filetype plugin indent on
+" ================ Turn Off Swap Files ==============
+set noswapfile
+set nobackup
+set nowb
 
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
+" ================ Persistent Undo ==================
+" " Keep undo history across sessions, by storing in file.
+" " Only works all the time.
 
-" Colour scheme
-syntax enable
-set background=dark
-colorscheme base16-ocean
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
 
-"define font"
-"set guifont=Ubuntu\ Mono:h18
-set guifont=Ubuntu\ Mono\ Bold\ 12
-"set guifont=Monaco\ Bold\ 9.5
-"set guifont=Monaco\ 9.5
-"set guifont=Monospace\ Bold\ 10
-"set guifont=Monospace\ 10
+" ================ Indentation ======================
 
-" Highlight current line
-set cursorline
-
-"number lines"
-set number
-
-"define the space between lines"
-set linespace=0
-
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
-
-"indentation"
-set smartindent
 set autoindent
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
 set shiftround
+set shiftwidth=2
+set smartindent
+set smarttab
+set softtabstop=2
+set tabstop=2
 
-" Powerline options
-"let g:Powerline_symbols = 'fancy'
-let g:Powerline_cache_enabled = 1
-set laststatus=2
+filetype plugin on
+filetype indent on
 
-" NERDTree mappings
-nnoremap <Leader>p :NERDTreeToggle<CR>
 
-" vim-rspec mappings
-nnoremap <Leader>t :RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :RunNearestSpec()<CR>
-nnoremap <Leader>l :RunLastSpec()<CR>
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
 
-" Ctrl+R reloads the ~/.vimrc file
-nnoremap <F12> :source ~/.vimrc
+set nowrap       "Don't wrap lines
+set linebreak    "Wrap lines at convenient points"
 
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
-if exists("&relativenumber")
-  " Use relative line numbers
-  set relativenumber
-  au BufReadPost * set relativenumber
+" ================ Folds ============================
+
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+" ================ Completion =======================
+
+set wildmode=list:longest
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+" TODO: this may not be in the correct place. It is intended to allow
+" overriding <Leader>. source ~/.vimrc.after if it exists.
+if filereadable(expand("~/.vimrc.after"))
+  source ~/.vimrc.before
 endif
-
-" Strip trailing whitespace
-function! <SID>StripTrailingWhitespaces()
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  %s/\s\+$//e
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" Local config
-" if filereadable($HOME . "/.gvimrc.local")
-"   source ~/.gvimrc.local
-" endif
