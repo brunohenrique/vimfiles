@@ -14,7 +14,7 @@ set guifont=Ubuntu\ Mono\ Bold\ 12
 "set guifont=Monospace\ 10
 
 " Highlight current line
-set cursorline
+"set cursorline
 
 
 "define the space between lines"

@@ -42,8 +42,8 @@ set nobackup
 set nowb
 
 " ================ Persistent Undo ==================
-" " Keep undo history across sessions, by storing in file.
-" " Only works all the time.
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
 
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
