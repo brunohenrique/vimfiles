@@ -25,13 +25,16 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 
 "tools
+
+"Bundle 'godlygeek/csapprox'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'Townk/vim-autoclose'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'chriskempson/base16-vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'garbas/vim-snipmate'
-"Bundle 'godlygeek/csapprox'
+Bundle 'guns/xterm-color-table.vim'
 Bundle 'henrik/vim-ruby-runner'
 Bundle 'honza/vim-snippets'
 Bundle 'iurifq/vim-travis-ci'
