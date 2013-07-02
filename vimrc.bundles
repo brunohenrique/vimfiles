@@ -27,6 +27,8 @@ Bundle 'vim-ruby/vim-ruby'
 "tools
 
 "Bundle 'godlygeek/csapprox'
+Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
+Bundle 'FredKSchott/CoVim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'Townk/vim-autoclose'
