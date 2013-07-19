@@ -105,3 +105,8 @@ set sidescroll=1
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
 endif
+
+" Fix a lot of issues with Fish shell
+if $SHELL == '/bin/fish'
+  set shell=/bin/sh
+endif
