@@ -3,6 +3,8 @@ set encoding=utf-8 nobomb
 
 let base16colorspace=256
 set background=dark
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
 colorscheme Tomorrow-Night
 
 "define font"

@@ -61,6 +61,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/upAndDown'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
