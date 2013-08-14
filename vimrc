@@ -100,6 +100,8 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 " TODO: this may not be in the correct place. It is intended to allow
 " overriding <Leader>. source ~/.vimrc.after if it exists.
 if filereadable(expand("~/.vimrc.after"))
