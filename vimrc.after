@@ -16,7 +16,7 @@ set guifont=Ubuntu\ Mono\ Bold\ 12
 "set guifont=Monospace\ 10
 
 " Highlight current line
-"set cursorline
+set cursorline
 
 
 "define the space between lines"
@@ -26,10 +26,8 @@ set linespace=0
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
-" Powerline options
-"let g:Powerline_symbols = 'fancy'
-let g:Powerline_cache_enabled = 1
-set laststatus=2
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " NERDTree mappings
 nnoremap <Leader>p :NERDTreeToggle<CR>

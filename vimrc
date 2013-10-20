@@ -21,6 +21,7 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set splitbelow
 set splitright
+set relativenumber
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
