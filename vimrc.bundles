@@ -11,7 +11,10 @@ Bundle 'gmarik/vundle'
 "colors
 Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bzx/vim-theme-pack'
 Bundle 'chriskempson/base16-vim'
+Bundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
+Bundle 'flazz/vim-colorschemes'
 
 "langs
 "Bundle 'ap/vim-css-color'

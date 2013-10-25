@@ -5,7 +5,7 @@ let base16colorspace=256
 set background=dark
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 
 "define font"
 "set guifont=Ubuntu\ Mono:h18
@@ -26,8 +26,9 @@ set linespace=0
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+set laststatus=2
 
 " NERDTree mappings
 nnoremap <Leader>p :NERDTreeToggle<CR>
