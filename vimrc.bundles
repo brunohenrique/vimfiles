@@ -1,71 +1,82 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+"
+"   " Recommended to install
+"    " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make
+"    -f your_machines_makefile
+NeoBundle 'Shougo/vimproc'
 
 "colors
-Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bzx/vim-theme-pack'
-Bundle 'chriskempson/base16-vim'
-Bundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
-Bundle 'flazz/vim-colorschemes'
+NeoBundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'bzx/vim-theme-pack'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
+NeoBundle 'flazz/vim-colorschemes'
 
 "langs
-"Bundle 'ap/vim-css-color'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'jimenezrick/vimerl'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mmalecki/vim-node.js'
-Bundle 'othree/html5.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
+"NeoBundle 'ap/vim-css-color'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'jimenezrick/vimerl'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mmalecki/vim-node.js'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'vim-ruby/vim-ruby'
 
 "tools
 
-"Bundle 'FredKSchott/CoVim'
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Bundle 'godlygeek/csapprox'
-"Bundle 'henrik/vim-ruby-runner'
-"Bundle 'jceb/vim-orgmode'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'Townk/vim-autoclose'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'guns/xterm-color-table.vim'
-Bundle 'honza/vim-snippets'
-Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattboehm/vim-unstack'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'natw/keyboard_cat.vim'
-Bundle 'pydave/AsyncCommand'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'skwp/vim-rspec'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tomtom/tlib_vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'vim-scripts/upAndDown'
+"NeoBundle 'FredKSchott/CoVim'
+"NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"NeoBundle 'godlygeek/csapprox'
+"NeoBundle 'henrik/vim-ruby-runner'
+"NeoBundle 'jceb/vim-orgmode'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'guns/xterm-color-table.vim'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'jeetsukumaran/vim-buffergator'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mattboehm/vim-unstack'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'natw/keyboard_cat.vim'
+NeoBundle 'pydave/AsyncCommand'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'skwp/vim-rspec'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/ctags.vim'
+NeoBundle 'vim-scripts/upAndDown'
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
+
+" Installation check.
+NeoBundleCheck
+NeoBundleCheck
