@@ -103,11 +103,25 @@ set sidescroll=1
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" Make those debugger statements painfully obvious
+au BufEnter *.rb syn match error contained "\<binding.pry\>"
+au BufEnter *.rb syn match error contained "\<debugger\>"
+
 " TODO: this may not be in the correct place. It is intended to allow
 " overriding <Leader>. source ~/.vimrc.after if it exists.
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
 endif
+
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 
 " Fix a lot of issues with Fish shell
 if $SHELL == '/bin/fish'
