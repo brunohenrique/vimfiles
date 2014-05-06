@@ -23,17 +23,11 @@ NeoBundle 'flazz/vim-colorschemes'
 
 "langs
 "NeoBundle 'ap/vim-css-color'
-NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'jimenezrick/vimerl'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mmalecki/vim-node.js'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'vim-ruby/vim-ruby'
 
 "tools
 
@@ -78,5 +72,4 @@ NeoBundle 'vim-scripts/upAndDown'
 filetype plugin indent on
 
 " Installation check.
-NeoBundleCheck
 NeoBundleCheck
