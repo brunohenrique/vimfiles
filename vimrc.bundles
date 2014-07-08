@@ -20,13 +20,14 @@ NeoBundle 'bzx/vim-theme-pack'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'junegunn/seoul256.vim'
 
 "langs
 "NeoBundle 'ap/vim-css-color'
-NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'mmalecki/vim-node.js'
+NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'tpope/vim-rails'
 
 "tools
@@ -47,6 +48,8 @@ NeoBundle 'godlygeek/csapprox'
 NeoBundle 'guns/xterm-color-table.vim'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'jeetsukumaran/vim-buffergator'
+NeoBundle 'junegunn/goyo.vim'
+NeoBundle 'junegunn/limelight.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'mattboehm/vim-unstack'
