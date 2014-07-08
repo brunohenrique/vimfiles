@@ -133,7 +133,6 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-
 " Fix a lot of issues with Fish shell
 if $SHELL == '/bin/fish'
   set shell=/bin/sh

@@ -7,14 +7,13 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
-"
-"   " Recommended to install
-"    " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make
-"    -f your_machines_makefile
+
+" Recommended to install
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimproc'
 
 "colors
-NeoBundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
+NeoBundle "daylerees/colour-schemes", { 'rtp': 'vim-themes/' }
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bzx/vim-theme-pack'
 NeoBundle 'chriskempson/base16-vim'
@@ -23,10 +22,13 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'junegunn/seoul256.vim'
 
 "langs
-"NeoBundle 'ap/vim-css-color'
+NeoBundle 'ap/vim-css-color'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'mmalecki/vim-node.js'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'tpope/vim-rails'
 
