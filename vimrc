@@ -23,6 +23,9 @@ set splitbelow
 set splitright
 set relativenumber
 
+" http://usevim.com/2014/07/11/key-speed/
+set timeoutlen=2000 ttimeoutlen=0
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
