@@ -36,6 +36,7 @@ NeoBundle 'tpope/vim-rails'
 
 "NeoBundle 'FredKSchott/CoVim'
 "NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"NeoBundle 'calebsmith/vim-lambdify'
 "NeoBundle 'godlygeek/csapprox'
 "NeoBundle 'henrik/vim-ruby-runner'
 "NeoBundle 'jceb/vim-orgmode'
@@ -74,6 +75,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/ctags.vim'
 NeoBundle 'vim-scripts/upAndDown'
+NeoBundle 'wakatime/vim-wakatime'
+NeoBundle 'fatih/vim-go'
 
 "Filetype plugin indent on is required by vundle
 filetype plugin indent on
