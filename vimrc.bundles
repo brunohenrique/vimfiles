@@ -13,7 +13,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 
 "colors
-NeoBundle "daylerees/colour-schemes", { 'rtp': 'vim-themes/' }
+NeoBundle "daylerees/colour-schemes", { 'rtp': 'vim/' }
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bzx/vim-theme-pack'
 NeoBundle 'chriskempson/base16-vim'
