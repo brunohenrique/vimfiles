@@ -2,6 +2,10 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 set t_Co=256
+set term=screen-256color
+
+" Use UTF-8 without BOM
+set encoding=utf-8 nobomb
 
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
 " source ~/.vimrc.before if it exists.
@@ -34,10 +38,9 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
-
-" =============== Vundle Initialization ===============
+" =============== NeoBundle Initialization ===============
 " This loads all the plugins specified in ~/.vimrc.bundles
-" Use Vundle plugin to manage all other plugins
+" Use NeoBundle plugin to manage all other plugins
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -69,13 +72,11 @@ set tabstop=2
 filetype plugin on
 filetype indent on
 
-
-" Display tabs and trailing spaces visually
-set list listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+" Show “invisible” characters
+set list lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points"
-
 
 " ================ Folds ============================
 
@@ -106,35 +107,11 @@ set sidescroll=1
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Make those debugger statements painfully obvious
-au BufEnter *.rb syn match error contained "\<binding.pry\>"
-au BufEnter *.rb syn match error contained "\<debugger\>"
-
 " TODO: this may not be in the correct place. It is intended to allow
 " overriding <Leader>. source ~/.vimrc.after if it exists.
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
 endif
-
-" Color name (:help cterm-colors) or ANSI code
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-
-" Color name (:help gui-colors) or RGB color
-let g:limelight_conceal_guifg = 'DarkGray'
-let g:limelight_conceal_guifg = '#777777'
-
-" Default: 0.5
-let g:limelight_default_coefficient = 0.7
-
-" Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
 
 " Fix a lot of issues with Fish shell
 if $SHELL == '/bin/fish'

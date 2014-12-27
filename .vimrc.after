@@ -1,14 +1,8 @@
-set term=screen-256color
-
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-
 let base16colorspace=256
 set background=dark
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 colorscheme Tomorrow-Night-Eighties
-"colorscheme bvemu
 
 "define font"
 "set guifont=Ubuntu\ Mono:h18
@@ -21,13 +15,8 @@ set guifont=Ubuntu\ Mono\ Bold\ 12
 " Highlight current line
 set cursorline
 
-
 "define the space between lines"
 set linespace=0
-
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -51,11 +40,6 @@ highlight clear SignColumn
 " NERDTree mappings
 nnoremap <Leader>p :NERDTreeToggle<CR>
 
-" vim-rspec mappings
-nnoremap <Leader>t :RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :RunNearestSpec()<CR>
-nnoremap <Leader>l :RunLastSpec()<CR>
-
 " Ctrl+R reloads the ~/.vimrc file
 nnoremap <F12> :source ~/.vimrc
 
@@ -64,6 +48,23 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
+" Make those debugger statements painfully obvious
+au BufEnter *.rb syn match error contained "\<binding.pry\>"
+au BufEnter *.rb syn match error contained "\<debugger\>"
+
+" Hyperfocus-writing in Vim with Limelight
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.7
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
