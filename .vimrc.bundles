@@ -18,12 +18,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "colors
-NeoBundle "daylerees/colour-schemes", { 'rtp': 'vim/' }
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'bzx/vim-theme-pack'
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'junegunn/seoul256.vim'
 
 "langs
