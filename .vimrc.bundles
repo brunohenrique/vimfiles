@@ -37,6 +37,7 @@ NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'hdima/python-syntax'
+NeoBundle 'suan/vim-instant-markdown'
 
 "tools
 
