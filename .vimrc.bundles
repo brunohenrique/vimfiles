@@ -1,7 +1,9 @@
 call plug#begin('~/.vim/plugged')
 "
-"colors
+"styles/colors
+Plug 'bling/vim-airline'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
+Plug 'vim-airline/vim-airline-themes'
 
 "langs
 Plug 'Quramy/vison'
@@ -22,7 +24,6 @@ Plug 'mxw/vim-jsx'
 "Plug 'mattboehm/vim-unstack'
 "Plug 'natw/keyboard_cat.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'guns/xterm-color-table.vim'
 Plug 'junegunn/limelight.vim'
